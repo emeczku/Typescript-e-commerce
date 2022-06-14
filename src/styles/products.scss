@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+/* navigation */
+
+.page-top {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-size: 17px;
+    font-weight: 400;
+    width: 50%;
+    padding-left: 5%;
+}
+
+.hamburger {
+    display: grid;
+    width: 50%;
+    height: 25px;
+    justify-content: end;
+    padding-right: 5%;
+}
+
+.hamburger span {
+    width: 25px;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+ul {
+    height: 150px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: cornflowerblue;
+    list-style: none;
+    position: absolute;
+}
+
+@keyframes slideIn {
+    from {
+        top: -150px;
+    }
+
+    to {
+        top: 50px;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        top: 50px;
+    }
+
+    to {
+        top: -150px;
+    }
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* header */
+
+header {
+    height: 300px;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1595505498407-af9f19a8fe96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1083&q=80");
+    background-repeat: no-repeat;
+    background-position: 5%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+header form {
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+header form input {
+    width: 60%;
+    height: 45px;
+    border: solid 3px cornflowerblue;
+    border-right: solid 1px cornflowerblue;
+    border-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    padding: 5px;
+}
+
+header form .search-button {
+    width: 60px;
+    background-color: white;
+    border: solid 3px cornflowerblue;
+    border-radius: 5px;
+    border-left: solid 1px cornflowerblue;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+@media only screen and (min-width: 1095px) {
+    header {
+        background-size: cover;
+    }
+}
+
+/* loader */
+
+.loader-container {
+    width: 100%;
+    height: 300px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 100px;
+}
+
+.loader {
+    margin: 50px auto;
+    border: 10px solid rgb(197, 197, 197);
+    border-radius: 50%;
+    border-top-color: cornflowerblue;
+    height: 50px;
+    width: 50px;
+    animation: loader 1s linear infinite;
+}
+
+@keyframes loader {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.lazyLoading {
+    display: none;
+}
+
+.products-container {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    height: 400px;
+    width: 200px;
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    margin: 50px auto;
+    border: solid 3px cornflowerblue;
+    border-radius: 5px;
+}
+
+.product img {
+    width: 50%;
+    padding-top: 10px;
+}
+
+.text-body {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.product-title {
+    width: 100%;
+}
+
+.add-to-cart {
+    width: 100px;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+    color: rgb(41, 125, 173);
+    padding: 2px;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.info-added {
+    color: rgb(9, 211, 20);
+}
+
+/* search errors */
+
+.search-error {
+    width: 100%;
+    height: 200px;
+    color: red;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* footer */
+
+footer {
+    height: 100px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: cornflowerblue;
+}

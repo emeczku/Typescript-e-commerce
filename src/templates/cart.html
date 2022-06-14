@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>E-COMMERCE - cart</title>
+        <meta
+            name="description"
+            content="HTML CSS JAVASCRIPT - E-COMMERCE PAGE PROJECT"
+        />
+        <meta name="keywords" content="HTML, CSS, JAVASCRIPT" />
+        <meta name="author" content="emeczku" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <section class="page-top">
+            <h1>E-commerce</h1>
+            <section class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </section>
+        </section>
+
+        <nav class="hidden nav-container">
+            <ul class="animation">
+                <li>
+                    <a href="/index.html">Homepage</a>
+                </li>
+                <li>
+                    <a href="/products.html">Products</a>
+                </li>
+                <li>
+                    <a href="/cart.html">Cart</a>
+                </li>
+            </ul>
+        </nav>
+
+        <header></header>
+
+        <section class="customer-data">
+            <h2>Enter your data below</h2>
+            <form action="">
+                <label for="fullname">Fullname*</label>
+                <input type="text" id="fullname" required />
+
+                <label for="email">E-mail*</label>
+                <input type="text" id="email" required />
+                <p class="invalid-email hidden">Invalid e-mail</p>
+
+                <label for="telephone">Telephone*</label>
+                <input type="text" id="telephone" required />
+                <p class="invalid-telephone hidden">Invalid telephone</p>
+
+                <label for="addres">Addres*</label>
+                <input type="text" id="addres" required />
+
+                <label for="apartment">Apartment number (optional)</label>
+                <input type="text" id="apartment" />
+
+                <label for="postcode">Postcode*</label>
+                <input type="text" id="postcode" required />
+                <p class="invalid-postcode hidden">Invalid Postcode</p>
+
+                <div class="privacy-policy">
+                    <input type="checkbox" id="privacyPolicy" required />
+                    <label for="privacyPolicy"
+                        >Do you accept <a href="#">Privacy Policy</a>?*</label
+                    >
+                </div>
+
+                <div class="statute">
+                    <input type="checkbox" id="statute" required />
+                    <label for="statute"
+                        >Do you accept <a href="#">Statute</a>?*</label
+                    >
+                </div>
+
+                <input
+                    type="text"
+                    value="GO TO PAYMENT"
+                    class="payment-button"
+                />
+                <p>Signed fields "*" are required</p>
+            </form>
+        </section>
+
+        <section class="cart">
+            <h2>Your cart</h2>
+            <p class="empty-cart hidden">
+                ...is empty. Don't wait and add something!
+            </p>
+            <section class="products-container"></section>
+        </section>
+
+        <footer>
+            <p>Creator's github</p>
+            <p>About project</p>
+            <p>Go to top</p>
+        </footer>
+
+        <script src="./scripts/cart-page/Cart.js"></script>
+        <script src="./scripts/cart-page/Validate.js"></script>
+        <script src="./scripts/Navigation.js"></script>
+    </body>
+</html>

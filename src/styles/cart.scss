@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* nav */
+
+.hidden {
+    display: none;
+}
+
+.page-top {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.page-top h1 {
+    font-size: 17px;
+    font-weight: 400;
+    width: 50%;
+    padding-left: 5%;
+}
+
+.hamburger {
+    display: grid;
+    width: 50%;
+    height: 25px;
+    justify-content: end;
+    padding-right: 5%;
+}
+
+.hamburger span {
+    width: 25px;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+}
+
+ul {
+    height: 150px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: cornflowerblue;
+    list-style: none;
+    position: absolute;
+}
+
+@keyframes slideIn {
+    from {
+        top: -150px;
+    }
+
+    to {
+        top: 50px;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        top: 50px;
+    }
+
+    to {
+        top: -150px;
+    }
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* header */
+
+header {
+    height: 300px;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1595505498407-af9f19a8fe96?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1083&q=80");
+    background-repeat: no-repeat;
+    background-position: 5%;
+}
+
+@media only screen and (min-width: 1095px) {
+    header {
+        background-size: cover;
+    }
+}
+
+/* customer data */
+
+h2 {
+    text-align: center;
+    margin: 50px 0 25px;
+}
+
+form {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    margin: 10px 0;
+}
+
+input {
+    height: 25px;
+    border-radius: 5px;
+}
+
+.payment-button {
+    height: 30px;
+    background-color: cornflowerblue;
+    border: solid 1px cornflowerblue;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.payment-button:hover {
+    background-color: white;
+    color: cornflowerblue;
+}
+
+.invalid-email,
+.invalid-telephone,
+.invalid-postcode {
+    color: red;
+}
+
+.invalid-field {
+    border-color: red;
+}
+
+/* cart */
+
+.cart {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.products-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: solid 3px cornflowerblue;
+    border-radius: 5px;
+    margin: 5px 5px;
+}
+
+.title {
+    width: 70%;
+    font-size: 15px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.delete-product {
+    width: 120px;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 2px solid cornflowerblue;
+    border-radius: 5px;
+    color: rgb(41, 125, 173);
+    padding: 2px;
+}
+
+/* footer */
+
+footer {
+    height: 100px;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: cornflowerblue;
+}
