@@ -9,13 +9,13 @@ E-commerce website template to help you get started without coding from scratch.
 Install dependencies
 
 ```
-    npm install
+npm install
 ```
 
 Automatic creation of production after changes
 
 ```
-    npm run watch
+npm run watch
 ```
 
 ## Deployment
@@ -23,7 +23,7 @@ Automatic creation of production after changes
 To deploy this project run
 
 ```
-  npm run build
+npm run build
 ```
 
 ## Environment Variables

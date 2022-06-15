@@ -1,9 +1,14 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
+
+//change path to your env variables
+require("dotenv").config({ path: "src/.env" });
 
 module.exports = {
     plugins: [
+        //creating html pages on production
         new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
             template: "./src/templates/index.html",
@@ -23,11 +28,23 @@ module.exports = {
             chunks: ["cart"],
             filename: "cart.html",
         }),
+        new webpack.DefinePlugin({
+            "process.env": JSON.stringify(process.env),
+        }),
     ],
     entry: {
-        index: "./src/components/index.ts",
-        products: "./src/components/products.ts",
-        cart: "./src/components/cart.ts",
+        index: [
+            "./src/components/scripts/index.ts",
+            "./src/components/scripts/navigation.ts",
+        ],
+        products: [
+            "./src/components/scripts/products.ts",
+            "./src/components/scripts/navigation.ts",
+        ],
+        cart: [
+            "./src/components/scripts/cart.ts",
+            "./src/components/scripts/navigation.ts",
+        ],
     },
     devtool: "source-map",
     devServer: {

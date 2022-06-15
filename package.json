@@ -2,7 +2,6 @@
     "name": "ecommerce-typescript",
     "version": "1.0.0",
     "description": "",
-    "private": true,
     "scripts": {
         "build": "webpack",
         "watch": "webpack --watch",

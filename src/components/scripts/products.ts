@@ -1,7 +1,7 @@
-import "../styles/products.scss";
-import { getData } from "../firebase";
-import { Product } from "./classes/Product";
-import { DisplayingProducts } from "./classes/DisplayingProducts";
+import "../../styles/products.scss";
+import { getData } from "./firebase";
+import { Product } from "../classes/Product";
+import { RenderProducts } from "../classes/RenderProducts";
 
 class ProductsList {
     private promise = getData();
@@ -23,22 +23,18 @@ class ProductsList {
                     );
                 });
             })
+            .then(() => {
+                const renderProducts = new RenderProducts(
+                    this.products,
+                    this.container
+                );
+                renderProducts.render();
+            })
             .catch((err) => {
                 throw new Error(err);
             });
     }
-
-    render() {
-        this.returnPromise();
-        window.setTimeout(() => {
-            const displaying = new DisplayingProducts(
-                this.products,
-                this.container
-            );
-            displaying.display();
-        }, 3000);
-    }
 }
 
 const productsList = new ProductsList();
-productsList.render();
+productsList.returnPromise();

@@ -1,6 +1,6 @@
 import { Product } from "./Product";
 
-export class DisplayingProducts {
+export class RenderProducts {
     products: Product[];
     container: HTMLElement;
     constructor(products: Product[], container: HTMLElement) {
@@ -8,7 +8,7 @@ export class DisplayingProducts {
         this.container = container;
     }
 
-    display() {
+    render() {
         this.products.forEach((product) => {
             const productContainer = document.createElement("div");
             productContainer.classList.add("product");
@@ -25,11 +25,6 @@ export class DisplayingProducts {
             const cardBody = document.createElement("div");
             cardBody.classList.add("text-body");
             productContainer.appendChild(cardBody);
-
-            // const cardTitle = document.createElement('h5');
-            // cardTitle.classList.add('product-title');
-            // cardTitle.innerText = `Category: ${product.category}`;
-            // cardBody.appendChild(cardTitle);
 
             const cardText = document.createElement("p");
             cardText.classList.add("product-title");
