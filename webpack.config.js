@@ -33,18 +33,13 @@ module.exports = {
         }),
     ],
     entry: {
-        index: [
-            "./src/components/scripts/index.ts",
-            "./src/components/scripts/navigation.ts",
-        ],
+        index: ["./src/views/Index.ts", "./src/scripts/navigation.ts"],
         products: [
-            "./src/components/scripts/products.ts",
-            "./src/components/scripts/navigation.ts",
+            "./src/views/Products.ts",
+            "./src/scripts/navigation.ts",
+            "./src/scripts/search.ts",
         ],
-        cart: [
-            "./src/components/scripts/cart.ts",
-            "./src/components/scripts/navigation.ts",
-        ],
+        cart: ["./src/views/Cart.ts", "./src/scripts/navigation.ts"],
     },
     devtool: "source-map",
     devServer: {

@@ -26,15 +26,25 @@ export class RenderProducts {
             cardBody.classList.add("text-body");
             productContainer.appendChild(cardBody);
 
-            const cardText = document.createElement("p");
-            cardText.classList.add("product-title");
-            cardText.innerText = product.name;
-            cardBody.appendChild(cardText);
+            const name = document.createElement("p");
+            name.classList.add("name");
+            name.innerText = product.name;
+            cardBody.appendChild(name);
+
+            const colorVersion = document.createElement("p");
+            colorVersion.classList.add("color-version");
+            colorVersion.innerText = product.colorVersion;
+            cardBody.appendChild(colorVersion);
 
             const cardPrice = document.createElement("p");
-            cardPrice.classList.add("product-title");
+            cardPrice.classList.add("price");
             cardPrice.innerText = `${product.price}$`;
             cardBody.appendChild(cardPrice);
+
+            const availableSizes = document.createElement("p");
+            cardPrice.classList.add("size");
+            cardPrice.innerText = `${product.size}$`;
+            cardBody.appendChild(availableSizes);
 
             const cardButton = document.createElement("button");
             cardButton.classList.add("add-to-cart");

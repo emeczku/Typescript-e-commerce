@@ -1,7 +1,8 @@
-import "../../styles/products.scss";
-import { getData } from "./firebase";
+import "../styles/products.scss";
+import { getData } from "../scripts/firebase";
 import { Product } from "../classes/Product";
 import { RenderProducts } from "../classes/RenderProducts";
+import Cart from "../classes/Cart";
 
 class ProductsList {
     private promise = getData();
@@ -29,6 +30,18 @@ class ProductsList {
                     this.container
                 );
                 renderProducts.render();
+                // disable loader
+                const loader: HTMLElement =
+                    document.querySelector(".loader-container");
+                loader.style.display = "none";
+
+                const cart = new Cart();
+                cart.checkLocalstorage();
+                document.querySelectorAll(".add-to-cart").forEach((el) => {
+                    el.addEventListener("click", (event: Event) => {
+                        cart.addToCart(event);
+                    });
+                });
             })
             .catch((err) => {
                 throw new Error(err);
